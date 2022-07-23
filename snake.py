@@ -63,8 +63,13 @@ def main():
         pygame.draw.rect(play_surface,(169,6,6),pygame.Rect(food_pos[0],food_pos[1],10,10))
         text = font.render(str(score),0,(200,60,80))
         play_surface.blit(text,(480,20))
+        fps.tick(20)
+        if snake_pos[0] <= 0 or snake_pos[0] >= 500:
+            run = False
+        if snake_pos[1] <= 0 or snake_pos[1] >= 500:
+            run = False
         pygame.display.flip()
-        fps.tick(10)
+
 
 
 
