@@ -1,6 +1,4 @@
-from cgitb import text
-from pickle import TRUE
-from turtle import pos
+
 import pygame, sys, time , random
 
 pygame.init()
